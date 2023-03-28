@@ -1,0 +1,192 @@
+.skin-blue .sidebar-menu>li>.treeview-menu,
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side
+{
+    background-color: #3D3D3D;
+}
+.skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a
+{
+    background: #d39a0f;
+    color: #fff;
+}
+.skin-blue .sidebar-menu>li:hover>a
+{
+    background: #d39a0f;
+}
+.skin-blue .main-header .navbar .sidebar-toggle, .skin-blue .main-header .navbar .sidebar-toggle:hover
+{
+    color: #d39a0f;
+}
+.btn-primary
+{
+    background-color: #d39a0f;
+    border-color: #d39a0f;
+}
+
+.profile-body.editable .upld-label:hover,
+.sk-circle .sk-child:before,
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header,
+.ucard .ucard-head
+{
+    background: #d39a0f;
+}
+.ucard-body .ucard-head{
+    background: transparent;
+    color: #d39a0f;
+    border-bottom: 2px solid;
+    padding: 10px 0 3px;
+}
+.ucard-body .ucard-body{
+    padding-left: 0;
+    padding-right: 0;
+}
+.z-panel .z-panel-container .z-panel-card .z-panel-card-header h3
+{
+    color:#d39a0f;
+}
+.z-panel .z-panel-container .z-panel-card .z-panel-card-header span.close-icon:hover,
+.btn-primary:hover, .btn-primary:active, .btn-primary.hover, .btn-primary:focus, .btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover
+{
+    background-color : #d39a0f;
+    color : #fff;
+}
+.note-toolbar.panel-heading
+{
+    background-color : #d39a0f;
+}
+.user-card-row .user-info .fa,
+.text-theme,
+.profile-page .profile-body.editable label, .profile-page .profile-body.editable .fc-icon,
+.navbar-nav>.user-menu>.dropdown-menu>li.user-footer .link-list a
+{
+    color: #3D3D3D;
+}
+.form-control:focus
+{
+    border-color: #3D3D3D;
+}
+.note-toolbar.panel-heading .btn.btn-default
+{
+    background:#d39a0f !important;
+}
+#filter-reset.btn-default{
+    background: #d39a0f;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.toggle-status a, .toggle-status-2 a, .toggle-status-admin a{
+    cursor: pointer;
+}
+#go-to-top-btn{
+    position: fixed;
+    transition: .5s;
+    bottom: 5px;
+    right: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.23);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 0;
+    line-height: 40px;
+    border-radius: 30px;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+#go-to-top-btn i{
+    animation: btnBounce 1s infinite alternate;
+    -webkit-animation: btnBounce 1s infinite alternate;
+}
+#go-to-top-btn.show{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+    bottom: 15px;
+    z-index: 9;
+}
+@keyframes btnBounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-4px);
+    }
+}
+@-webkit-keyframes btnBounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-4px);
+    }
+}
+/*  .user-actions a:nth-child(7n+1):hover
+{
+    border-color: #d39a0f;
+    background: #d39a0f;
+}
+.user-actions a:nth-child(7n+1)
+{
+    color: #d39a0f;
+}*/
+.user-card-row .user-info .date{
+    text-transform: none;
+}
+.form-group img[id]+input[onchange]{
+    margin-top: 10px;
+}
+
+
+input.hide-arrow::-webkit-outer-spin-button,
+input.hide-arrow::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input.hide-arrow[type=number] {
+    -moz-appearance:textfield;
+}
+.string-break
+{
+    display: block;
+    max-width: 700px;
+}
+
+
+@media (max-width: 1199px){
+
+    .box-header.filter-form>.col-md-2{
+    width: auto;
+    }
+    .box-header.filter-form .form-control{
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .box-header.filter-form select.form-control{
+        max-width: 170px;
+    }
+    .user-card-row .user-info h3{
+        font-size: 16px;
+    }
+    .user-card-row .user-actions a{
+        min-width: 63px;
+    }
+    .user-actions a span{
+        font-size: 11px;
+    }
+    .user-card-row .user-info .contact .fa{
+        width: 10px;
+    }
+    .user-card-row{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .user-card-row .user-details{
+        margin-bottom: 5px;
+    }
+}
+
+
+
