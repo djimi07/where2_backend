@@ -276,9 +276,9 @@ class Bar_RestaurantController extends Controller
                 }
             }
             if (@$request->restaurantId)
-                return json_response(['status' => true, 'message' => trans('msg.succ_update')], 200);
+                return json_response(['status' => true, 'message' => trans('msg.succ_update'), 'data' => @$response], 200);
             else
-                return json_response(['status' => true, 'message' => trans('msg.succ_insert_bar_restaurant')], 200);
+                return json_response(['status' => true, 'message' => trans('msg.succ_insert_bar_restaurant'), 'data' => @$response,], 200);
         }
 
 
