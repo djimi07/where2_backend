@@ -37,7 +37,7 @@ class ImageController extends Controller
         {
             $arr['imageId'] = $val->imageId;
             //$arr['image'] = Image_url($val->imageName);
-            $arr['image'] = 'https://where2.s3.amazonaws.com/' . $val->imageName;
+            $arr['image'] = $val->imageName;
 
             $data[] = $arr;
         }

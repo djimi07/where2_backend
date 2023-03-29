@@ -226,7 +226,7 @@ class UserController extends Controller
         if ($res)
         {
             //$data = ['image' => Image_url($image->imageName)];
-            $data = ['image' => 'https://where2.s3.amazonaws.com/' . $image->imageName];
+            $data = ['image' => $image->imageName];
         }
         return json_response(['status' => true, 'data' => @$data, 'message' => 'Success'], 200);
 

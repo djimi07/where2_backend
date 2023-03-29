@@ -17,7 +17,7 @@ class Images extends Model
         }
 
         $obj = Images::firstOrNew(['imageId' => $imageId]);
-        $obj->imageName = $request->new_image;
+        $obj->imageName = 'https://where2.s3.amazonaws.com/' . $request->new_image;
         $obj->type = 1;
         $obj->save();
 
