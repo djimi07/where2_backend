@@ -347,7 +347,7 @@ class Bar_Restaurant extends Model
         if (isset($request->description))
             $obj->description = $request->description;
 
-        $obj->save();
+        //$obj->save();
 
         if (isset($request->imageUrl) && !empty($request->imageUrl))
         {
@@ -370,6 +370,10 @@ class Bar_Restaurant extends Model
             $userModel->save();
             */
         }
+
+        $obj->imageUrl = $new_image;
+        $obj->save();
+
         return $obj;
 
     }

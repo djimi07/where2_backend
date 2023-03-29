@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/laravel/production/1680042089886-2023-03-28T22:21:29.886Z/laravel.zip"
+          "S3Key": "serverless/laravel/production/1680120399490-2023-03-29T20:06:39.490Z/laravel.zip"
         },
         "Handler": "public/index.php",
         "Runtime": "provided.al2",
@@ -196,7 +196,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/laravel/production/1680042089886-2023-03-28T22:21:29.886Z/laravel.zip"
+          "S3Key": "serverless/laravel/production/1680120399490-2023-03-29T20:06:39.490Z/laravel.zip"
         },
         "Handler": "artisan",
         "Runtime": "provided.al2",
@@ -218,24 +218,24 @@
         "ArtisanLogGroup"
       ]
     },
-    "WebLambdaVersionsoo0AO7LrmWWvoLv3SnqeNDoqy4QjyoXYEySVnwTkc": {
+    "WebLambdaVersioneooOnflIFx6RxwI4Ml3yt0eh0HeczA3S6AMGrf83Rw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "WebLambdaFunction"
         },
-        "CodeSha256": "hD2YjJuMyJCupvqbwYc7cMqN9PhDaNwvClEFDTb0YZw="
+        "CodeSha256": "qLxOEEF0HCo6wAo6fxdDaWsKwkmTb7WcJyEBrkBDQ9I="
       }
     },
-    "ArtisanLambdaVersion5p4ILhvd2jyqRuUfmnsfpIcX4ZLGqPTiYP4dl2Pr9s": {
+    "ArtisanLambdaVersionumUFyssA0dERwtwzbde3ZOmsrlwlL95vMkem0Wvw": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ArtisanLambdaFunction"
         },
-        "CodeSha256": "hD2YjJuMyJCupvqbwYc7cMqN9PhDaNwvClEFDTb0YZw="
+        "CodeSha256": "qLxOEEF0HCo6wAo6fxdDaWsKwkmTb7WcJyEBrkBDQ9I="
       }
     },
     "HttpApi": {
@@ -346,7 +346,7 @@
     "WebLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "WebLambdaVersionsoo0AO7LrmWWvoLv3SnqeNDoqy4QjyoXYEySVnwTkc"
+        "Ref": "WebLambdaVersioneooOnflIFx6RxwI4Ml3yt0eh0HeczA3S6AMGrf83Rw"
       },
       "Export": {
         "Name": "sls-laravel-production-WebLambdaFunctionQualifiedArn"
@@ -355,7 +355,7 @@
     "ArtisanLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ArtisanLambdaVersion5p4ILhvd2jyqRuUfmnsfpIcX4ZLGqPTiYP4dl2Pr9s"
+        "Ref": "ArtisanLambdaVersionumUFyssA0dERwtwzbde3ZOmsrlwlL95vMkem0Wvw"
       },
       "Export": {
         "Name": "sls-laravel-production-ArtisanLambdaFunctionQualifiedArn"
