@@ -20,7 +20,7 @@ class CreateBarRestaurantsTable extends Migration
             $table->bigInteger('yelpId');
             $table->string('userSecret')->default('')->nullable();
             $table->string('name', 200)->default('')->nullable();
-            $table->string('imageUrl', 100)->nullable();
+            $table->string('imageUrl', 300)->nullable();
             $table->boolean('status')->default('0')->comment('active or not');
             $table->string('address')->default('')->nullable();
             $table->string('city')->default('')->nullable();

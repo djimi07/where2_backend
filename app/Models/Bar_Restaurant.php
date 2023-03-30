@@ -210,6 +210,7 @@ class Bar_Restaurant extends Model
             $offset = $request->offset;
 
         $query = Bar_Restaurant::query();
+        $query->where();
         $query->join('images', 'bar_restaurants.restaurantId', '=', 'images.restaurantId');
         $query->groupBy('images.restaurantId');
         $query->where('bar_restaurants.status', '=', 1);
@@ -347,12 +348,12 @@ class Bar_Restaurant extends Model
         if (isset($request->description))
             $obj->description = $request->description;
 
-        //$obj->save();
+        $obj->save();
+        $new_image = '';
 
         if (isset($request->imageUrl) && !empty($request->imageUrl))
         {
             $res = (object) array();
-
             foreach ($request->files->all('imageUrl') as $key => $xx)
             {
                 $imageHelper = new \ImageHelper();
@@ -363,6 +364,9 @@ class Bar_Restaurant extends Model
                 $res->type = 2;
                 $response = $userModel->upload_images($res);
             }
+
+            // we must change the first row on images table related to this restaurant
+            $firstRow = Images::where('restaurantId', '=', $obj->restaurantId)->limit(1)->update(['imageName' => $new_image]);
 
             /* $userModel = new Images();
             $userModel->restaurantId = $obj->restaurantId;
