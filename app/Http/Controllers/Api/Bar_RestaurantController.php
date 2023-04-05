@@ -129,7 +129,7 @@ class Bar_RestaurantController extends Controller
     }
     public function Delete(request $request)
     {
-        $dd = Bar_Restaurant::where("restaurantId", $request->id)->delete();
+        $dd = DB::table('bar_restaurants')->where("restaurantId", $request->id)->delete();
         // $images =Images::where("restaurantId",$request->id)->get();
 
         // foreach($images as $val)

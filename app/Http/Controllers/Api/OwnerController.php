@@ -241,7 +241,8 @@ class OwnerController extends Controller
     }
     public function delete(request $request)
     {
-        $dd = User::where("userId", $request->id)->update(['is_owner' => 0]);
+        //$dd = User::where("userId", $request->id)->update(['is_owner' => 0]);
+        $dd = DB::table('users')->where("userId", $request->id)->where('is_owner', 1)->delete();
         Bar_Restaurant::where('ownerId', $request->id)->update(['ownerId' => ""]);
         if ($dd)
         {

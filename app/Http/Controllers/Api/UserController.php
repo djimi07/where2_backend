@@ -291,6 +291,18 @@ class UserController extends Controller
         {
             $restaurants = Bar_Restaurant::where('ownerId', $user->userId)->get();
 
+            if ($restaurants)
+            {
+                foreach ($restaurants as $key => $restaurant)
+                {
+                    if (empty($restaurant->imageUrl))
+                    {
+                        $restaurant->imageUrl = Images::where('restaurantId', $restaurant->restaurantId)->first()->imageName;
+                        $restaurant->save();
+                    }
+                }
+            }
+
             //$data = $this->user_array_data($response);
 
             $data = array(

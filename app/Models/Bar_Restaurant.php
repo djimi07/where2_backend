@@ -210,7 +210,6 @@ class Bar_Restaurant extends Model
             $offset = $request->offset;
 
         $query = Bar_Restaurant::query();
-        $query->where();
         $query->join('images', 'bar_restaurants.restaurantId', '=', 'images.restaurantId');
         $query->groupBy('images.restaurantId');
         $query->where('bar_restaurants.status', '=', 1);
