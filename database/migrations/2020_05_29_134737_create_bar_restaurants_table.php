@@ -34,6 +34,10 @@ class CreateBarRestaurantsTable extends Migration
             $table->double('longitude', 10, 10);
             $table->double('distance', 10, 10);
 
+            $table->boolean('is_bold')->default('0');
+            $table->string('color')->default('')->nullable();
+            $table->string('fontSize')->default('')->nullable();
+
             $table->bigInteger('type')->nullable();
 
             $table->string('description')->default('')->nullable();

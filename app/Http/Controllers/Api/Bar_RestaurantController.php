@@ -330,7 +330,7 @@ class Bar_RestaurantController extends Controller
         if ($validator->fails())
             return json_response(['status' => false, 'message' => $validator->messages()->first()], 400);
 
-        $response = Bar_Restaurant::select('restaurantId', 'ownerId', 'name', 'imageUrl', 'address', 'city', 'state', 'country', 'zipCode', 'phone', 'reviewCount', 'rating', 'latitude', 'longitude', 'description')->where('restaurantId', $request->restaurantId)->first();
+        $response = Bar_Restaurant::select('restaurantId', 'ownerId', 'name', 'imageUrl', 'address', 'city', 'state', 'country', 'zipCode', 'phone', 'reviewCount', 'rating', 'latitude', 'longitude', 'description', 'is_bold', 'color', 'fontSize')->where('restaurantId', $request->restaurantId)->first();
         $images = Images::where('restaurantId', $request->restaurantId)->get();
         if (!empty($response))
         {

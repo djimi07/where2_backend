@@ -34,7 +34,6 @@ class ImageHelper
             $image_name = $request->img_name;
 
         $new_file_name = $image_name . time() . '.' . $filetype;
-        // $request->file('userProfilePicture')->storeAs('public/image',$new_file_name);
         //$file->move($destinationPath, $new_file_name);
         Storage::disk('s3')->putFileAs($destinationPath, $file, $new_file_name);
 

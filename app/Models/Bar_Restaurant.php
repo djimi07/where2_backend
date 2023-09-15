@@ -345,7 +345,38 @@ class Bar_Restaurant extends Model
             $obj->distance = $request->distance;
 
         if (isset($request->description))
+        {
             $obj->description = $request->description;
+
+            if (isset($request->is_bold) && !empty($request->is_bold))
+            {
+                $obj->is_bold = $request->is_bold;
+            }
+
+            else
+            {
+                $obj->is_bold = 0;
+            }
+
+            if (isset($request->color) && !empty($request->color))
+            {
+                $obj->color = $request->color;
+            }
+            else
+            {
+                $obj->color = '';
+
+            }
+
+            if (isset($request->fontSize) && !empty($request->fontSize))
+            {
+                $obj->fontSize = $request->fontSize;
+            }
+            else
+            {
+                $obj->fontSize = '';
+            }
+        }
 
         $obj->save();
         $new_image = '';
@@ -372,9 +403,11 @@ class Bar_Restaurant extends Model
             $userModel->type = 2;
             $userModel->save();
             */
+
+            $obj->imageUrl = $new_image;
         }
 
-        $obj->imageUrl = $new_image;
+
         $obj->save();
 
         return $obj;

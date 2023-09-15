@@ -180,7 +180,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/laravel/production/1680557851751-2023-04-03T21:37:31.751Z/laravel.zip"
+                "S3Key": "serverless/laravel/production/1680887884617-2023-04-07T17:18:04.617Z/laravel.zip"
               },
               "Handler": "public/index.php",
               "Runtime": "provided.al2",
@@ -208,7 +208,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/laravel/production/1680557851751-2023-04-03T21:37:31.751Z/laravel.zip"
+                "S3Key": "serverless/laravel/production/1680887884617-2023-04-07T17:18:04.617Z/laravel.zip"
               },
               "Handler": "artisan",
               "Runtime": "provided.al2",
@@ -230,24 +230,24 @@
               "ArtisanLogGroup"
             ]
           },
-          "WebLambdaVersionfCPZ3uka1sCNIg5909ffe0XXNTjVzK1stflQuUhmbmU": {
+          "WebLambdaVersionFsGzJPj5Zujj5whXi852eUNSjtGJ2p7fIXy7sT4Ro": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "WebLambdaFunction"
               },
-              "CodeSha256": "cR1Z+bEgSHjlzdqZIKAjrPREGrQU6ZY+W96Ml9pXpZQ="
+              "CodeSha256": "H7djDelrll/es1yrvDkzsgSLpVbtVYAZhJvPPa0qtnU="
             }
           },
-          "ArtisanLambdaVersionJiMRU7v6eICkVJC3tsIhCzlRRgyTkVdwza3Crabo": {
+          "ArtisanLambdaVersionfL0gWvCPeXPYLj29IhFmjSdQJdsiNSQXz7wYZM3Qdd4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ArtisanLambdaFunction"
               },
-              "CodeSha256": "cR1Z+bEgSHjlzdqZIKAjrPREGrQU6ZY+W96Ml9pXpZQ="
+              "CodeSha256": "H7djDelrll/es1yrvDkzsgSLpVbtVYAZhJvPPa0qtnU="
             }
           },
           "HttpApi": {
@@ -355,7 +355,7 @@
           "WebLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "WebLambdaVersionfCPZ3uka1sCNIg5909ffe0XXNTjVzK1stflQuUhmbmU"
+              "Ref": "WebLambdaVersionFsGzJPj5Zujj5whXi852eUNSjtGJ2p7fIXy7sT4Ro"
             },
             "Export": {
               "Name": "sls-laravel-production-WebLambdaFunctionQualifiedArn"
@@ -364,7 +364,7 @@
           "ArtisanLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ArtisanLambdaVersionJiMRU7v6eICkVJC3tsIhCzlRRgyTkVdwza3Crabo"
+              "Ref": "ArtisanLambdaVersionfL0gWvCPeXPYLj29IhFmjSdQJdsiNSQXz7wYZM3Qdd4"
             },
             "Export": {
               "Name": "sls-laravel-production-ArtisanLambdaFunctionQualifiedArn"
@@ -515,7 +515,7 @@
         "memory": 1024,
         "runtime": "provided.al2",
         "vpc": {},
-        "versionLogicalId": "WebLambdaVersionfCPZ3uka1sCNIg5909ffe0XXNTjVzK1stflQuUhmbmU"
+        "versionLogicalId": "WebLambdaVersionFsGzJPj5Zujj5whXi852eUNSjtGJ2p7fIXy7sT4Ro"
       },
       "artisan": {
         "handler": "artisan",
@@ -529,7 +529,7 @@
         "memory": 1024,
         "runtime": "provided.al2",
         "vpc": {},
-        "versionLogicalId": "ArtisanLambdaVersionJiMRU7v6eICkVJC3tsIhCzlRRgyTkVdwza3Crabo"
+        "versionLogicalId": "ArtisanLambdaVersionfL0gWvCPeXPYLj29IhFmjSdQJdsiNSQXz7wYZM3Qdd4"
       }
     },
     "configValidationMode": "warn",
@@ -551,7 +551,7 @@
         ],
         "artifactsS3KeyDirname": "serverless/laravel/production/code-artifacts",
         "artifact": "/Users/jimmy/Desktop/freelance project/upwork/Works/BufferSol tech/where2/where2/where_2/.serverless/laravel.zip",
-        "artifactDirectoryName": "serverless/laravel/production/1680557851751-2023-04-03T21:37:31.751Z"
+        "artifactDirectoryName": "serverless/laravel/production/1680887884617-2023-04-07T17:18:04.617Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -565,7 +565,7 @@
     "artifact": "/Users/jimmy/Desktop/freelance project/upwork/Works/BufferSol tech/where2/where2/where_2/.serverless/laravel.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/laravel/production/1680557851751-2023-04-03T21:37:31.751Z",
+    "artifactDirectoryName": "serverless/laravel/production/1680887884617-2023-04-07T17:18:04.617Z",
     "artifact": "laravel.zip"
   }
 }
